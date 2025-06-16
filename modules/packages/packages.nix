@@ -10,6 +10,9 @@ with pkgs; {
     wget
     unzip
     tree
+eza # Better ls
+fd # Better find
+
 
     firefox
     vscode
@@ -21,6 +24,10 @@ with pkgs; {
     tmux
     ripgrep
     zoxide
+
+    # LSP and formatters
+    nil # Nix LSP
+    nixfmt-classic # Nix formatter
 
     # Fonts
     jetbrains-mono
