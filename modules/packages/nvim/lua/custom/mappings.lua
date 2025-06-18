@@ -43,28 +43,54 @@ M.go = {
     ["<leader>gb"] = { "<cmd>GoBuild<CR>", "Go build" },
     ["<leader>gt"] = { "<cmd>GoTest<CR>", "Go test" },
     ["<leader>gtf"] = { "<cmd>GoTestFunc<CR>", "Go test function" },
+    ["<leader>gtF"] = { "<cmd>GoTestFile<CR>", "Go test file" },
+    ["<leader>gta"] = { "<cmd>GoAddTest<CR>", "Go add test" },
     ["<leader>gc"] = { "<cmd>GoCoverage<CR>", "Go coverage" },
     ["<leader>gf"] = { "<cmd>GoFmt<CR>", "Go format" },
     ["<leader>gi"] = { "<cmd>GoImport<CR>", "Go import" },
     ["<leader>gd"] = { "<cmd>GoDoc<CR>", "Go doc" },
+    ["<leader>gv"] = { "<cmd>GoVet<CR>", "Go vet" },
+    ["<leader>gl"] = { "<cmd>GoLint<CR>", "Go lint" },
+    ["<leader>gfs"] = { "<cmd>GoFillStruct<CR>", "Go fill struct" },
+    ["<leader>gie"] = { "<cmd>GoIfErr<CR>", "Go if err" },
+    ["<leader>gtj"] = { "<cmd>GoAddTag json<CR>", "Add json tags" },
+    ["<leader>gty"] = { "<cmd>GoAddTag yaml<CR>", "Add yaml tags" },
+    ["<leader>gtr"] = { "<cmd>GoRmTag<CR>", "Remove tags" },
+    ["<leader>gim"] = { "<cmd>GoImpl<CR>", "Go implement interface" },
+    ["<leader>gch"] = { "<cmd>GoCmt<CR>", "Go comment" },
   },
 }
 
--- LSP mappings
-M.lsp = {
+-- DAP (Debug Adapter Protocol) mappings
+M.dap = {
   n = {
-    ["gD"] = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "LSP declaration" },
-    ["gd"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", "LSP definition" },
-    ["K"] = { "<cmd>lua vim.lsp.buf.hover()<CR>", "LSP hover" },
-    ["gi"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "LSP implementation" },
-    ["<leader>D"] = { "<cmd>lua vim.lsp.buf.type_definition()<CR>", "LSP definition type" },
-    ["<leader>ra"] = { "<cmd>lua vim.lsp.buf.rename()<CR>", "LSP rename" },
-    ["<leader>ca"] = { "<cmd>lua vim.lsp.buf.code_action()<CR>", "LSP code action" },
-    ["gr"] = { "<cmd>lua vim.lsp.buf.references()<CR>", "LSP references" },
-    ["<leader>e"] = { "<cmd>lua vim.diagnostic.open_float()<CR>", "Floating diagnostic" },
-    ["[d"] = { "<cmd>lua vim.diagnostic.goto_prev()<CR>", "Goto prev" },
-    ["]d"] = { "<cmd>lua vim.diagnostic.goto_next()<CR>", "Goto next" },
-    ["<leader>fm"] = { "<cmd>lua vim.lsp.buf.format { async = true }<CR>", "LSP formatting" },
+    ["<leader>db"] = { "<cmd>DapToggleBreakpoint<CR>", "Toggle breakpoint" },
+    ["<leader>dc"] = { "<cmd>DapContinue<CR>", "Continue" },
+    ["<leader>di"] = { "<cmd>DapStepInto<CR>", "Step into" },
+    ["<leader>do"] = { "<cmd>DapStepOver<CR>", "Step over" },
+    ["<leader>du"] = { "<cmd>DapStepOut<CR>", "Step out" },
+    ["<leader>dr"] = { "<cmd>DapRepl<CR>", "Open REPL" },
+    ["<leader>dt"] = { "<cmd>DapTerminate<CR>", "Terminate" },
+    ["<leader>dui"] = { "<cmd>lua require('dapui').toggle()<CR>", "Toggle DAP UI" },
+  },
+}
+
+-- Database mappings
+M.database = {
+  n = {
+    ["<leader>Du"] = { "<cmd>DBUIToggle<CR>", "Toggle DB UI" },
+    ["<leader>Df"] = { "<cmd>DBUIFindBuffer<CR>", "Find DB buffer" },
+    ["<leader>Dr"] = { "<cmd>DBUIRenameBuffer<CR>", "Rename DB buffer" },
+    ["<leader>Dl"] = { "<cmd>DBUILastQueryInfo<CR>", "Last query info" },
+  },
+}
+
+-- REST client mappings
+M.rest = {
+  n = {
+    ["<leader>rr"] = { "<cmd>Rest run<CR>", "Run request" },
+    ["<leader>rl"] = { "<cmd>Rest run last<CR>", "Run last request" },
+    ["<leader>rp"] = { "<cmd>Rest run preview<CR>", "Preview request" },
   },
 }
 
