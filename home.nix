@@ -16,7 +16,16 @@
   home = {
     packages = with pkgs; [
       # Add any additional packages here directly if needed
-
+      libGL
+      libglvnd
+      mesa
+      wayland
+      wayland-protocols
     ];
+
+    sessionVariables = {
+      PATH =  pkgs.lib.mkForce "$PATH:${config.home.homeDirectory}/.local/kitty.app/bin";
+    };
+
   };
 }

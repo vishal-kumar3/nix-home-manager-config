@@ -11,7 +11,6 @@
     ./ghostty.nix                     # terminal
     ./lazygit.nix
     ./obsidian.nix
-./nvim/default.nix
-
+    ./nvim/default.nix
   ];
 }

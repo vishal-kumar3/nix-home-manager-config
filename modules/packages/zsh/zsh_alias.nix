@@ -9,20 +9,8 @@
     shellAliases = {
       # Utils
       c = "clear";
-      cd = "z";
-      tt = "gtrash put";
       cat = "bat";
-      nano = "micro";
       diff = "delta --diff-so-fancy --side-by-side";
-      less = "bat";
-      y = "yazi";
-      py = "python";
-      ipy = "ipython";
-      icat = "kitten icat";
-      dsize = "du -hs";
-      pdf = "tdf";
-      open = "xdg-open";
-      space = "ncdu";
       man = "BAT_THEME='default' batman";
 
       l = "eza --icons  -a --group-directories-first -1"; # EZA_ICON_SPACING=2
@@ -30,16 +18,7 @@
       tree = "eza --icons --tree --group-directories-first";
 
       # Nixos
-      cdnix = "cd ~/nixos-config && codium ~/nixos-config";
-      ns = "nom-shell --run zsh";
-      nd = "nom develop --command zsh";
-      nb = "nom build";
-      nix-switch = "nh os switch";
-      nix-update = "nh os switch --update";
-      nix-clean = "nh clean all --keep 5";
-      nix-search = "nh search";
-      nix-test = "nh os test";
-      update = "nix run home-manager - -switch - -flake /home/vishal/nix#vishal";
+      update = "home-manager switch --flake /home/vishal/nix#vishal";
 
       # python
       piv = "python -m venv .venv";
@@ -48,6 +27,44 @@
       # Directory
       project = "cd $HOME/Desktop/project";
 
+      # Additional productivity aliases
+      # System monitoring
+      top = "bottom";
+      htop = "bottom";
+      ps = "procs";
+      du = "dust";
+
+      # Development
+      lg = "lazygit";
+      ld = "lazydocker";
+      serve = "python -m http.server 8000";
+      myip = "curl -s https://httpbin.org/ip | jq -r .origin";
+
+      # JSON/YAML
+      json = "fx";
+      yaml = "yq";
+
+      # Network
+      http = "httpie";
+      curl = "curlie";
+
+      # Directory navigation
+      cd = "z"; # zoxide
+      cdi = "zi"; # interactive zoxide
+
+      # Git productivity (removed gf - it's in git.nix)
+      gstat = "git-cliff --unreleased --strip all";
+
+      # Task management
+      t = "task";
+      ta = "task add";
+      tl = "task list";
+
+      # Code statistics
+      loc = "tokei";
+
+      # System info
+      sysinfo = "neofetch";
     };
   };
 }

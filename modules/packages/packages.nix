@@ -2,7 +2,7 @@
 
 with pkgs; {
   home.packages = [
-    neovim
+    # Core utilities (removed neovim)
     htop
     curl
     fzf
@@ -14,6 +14,7 @@ eza # Better ls
 fd # Better find
 
 
+    # Applications
     firefox
     vscode
     brave
@@ -25,9 +26,7 @@ fd # Better find
     ripgrep
     zoxide
 
-    # LSP and formatters
-    nil # Nix LSP
-    nixfmt-classic # Nix formatter
+    # LSP and formatters (moved to nvim/default.nix)
 
     # Fonts
     jetbrains-mono
