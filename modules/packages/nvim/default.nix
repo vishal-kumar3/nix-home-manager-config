@@ -37,8 +37,9 @@
     # LSP servers
     nodePackages.typescript-language-server
     nodePackages.vscode-langservers-extracted # HTML, CSS, JSON
+    nodePackages."@tailwindcss/language-server" # Tailwind CSS LSP
     lua-language-server
-nil # Nix LSP
+    nil # Nix LSP
 
     gopls pyright marksman # Markdown LSP
 
@@ -79,7 +80,6 @@ nil # Nix LSP
     wire # Dependency injection
     mockgen # Mock generation
 
-
     # Monitoring and profiling
     pprof # Go profiler
 
@@ -97,5 +97,8 @@ nil # Nix LSP
     ripgrep fd fzf tree-sitter gcc # Required for treesitter compilation
     unzip # Required for Mason
     lazygit gh # GitHub CLI
+
+    # Additional packages for enhanced LSP support
+    luarocks # Required for rest.nvim and other Lua packages
   ];
 }
