@@ -34,6 +34,9 @@
     # Core dependencies
     git curl nodejs_22 python3
 
+# Clipboard providers
+xclip wl-clipboard
+
     # LSP servers
     nodePackages.typescript-language-server
     nodePackages.vscode-langservers-extracted # HTML, CSS, JSON
