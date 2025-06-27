@@ -20,34 +20,11 @@
       # Nixos
       update = "home-manager switch --flake /home/vishal/nix#vishal";
 
-      # python
-      piv = "python -m venv .venv";
-      psv = "source .venv/bin/activate";
-
       # Directory
       project = "cd $HOME/Desktop/project";
+      codenix = "cd $HOME/nix && code ."; 
 
       # Additional productivity aliases
-      # System monitoring
-      top = "bottom";
-      htop = "bottom";
-      ps = "procs";
-      du = "dust";
-
-      # Development
-      lg = "lazygit";
-      ld = "lazydocker";
-      serve = "python -m http.server 8000";
-      myip = "curl -s https://httpbin.org/ip | jq -r .origin";
-
-      # JSON/YAML
-      json = "fx";
-      yaml = "yq";
-
-      # Network
-      http = "httpie";
-      curl = "curlie";
-
       # Directory navigation
       cd = "z"; # zoxide
       cdi = "zi"; # interactive zoxide

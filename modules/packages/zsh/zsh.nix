@@ -12,6 +12,17 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    # Load .env file and update PATH
+    initExtra = ''
+      # Add Bun to PATH
+      export PATH="$HOME/.bun/bin:$PATH"
+
+      # Load .env file from nix directory
+      if [ -f "$HOME/nix/.env" ]; then
+        export $(cat "$HOME/nix/.env" | grep -v '^#' | xargs)
+      fi
+    '';
+
     # Use Oh My Zsh
     oh-my-zsh = {
       enable = true;
