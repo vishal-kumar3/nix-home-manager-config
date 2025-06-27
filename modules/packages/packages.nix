@@ -10,15 +10,13 @@ with pkgs; {
     wget
     unzip
     tree
-eza # Better ls
-fd # Better find
-
+    eza # Better ls
+    fd # Better find
 
     # Applications
     firefox
     vscode
     brave
-    kitty
     telegram-desktop
     obsidian
 
