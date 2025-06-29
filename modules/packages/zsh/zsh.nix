@@ -13,7 +13,7 @@
     syntaxHighlighting.enable = true;
 
     # Load .env file and update PATH
-    initExtra = ''
+    initContent = ''
       # Add Bun to PATH
       export PATH="$HOME/.bun/bin:$PATH"
 

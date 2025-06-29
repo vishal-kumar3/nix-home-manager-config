@@ -7,7 +7,7 @@
       nix-shell = "nix-shell --run $SHELL";
     };
 
-    initExtra = ''
+    initContent = ''
       # Function to enter nix-shell with current environment
       nix-shell-here() {
         if [ -f shell.nix ] || [ -f default.nix ]; then
