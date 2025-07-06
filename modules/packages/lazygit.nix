@@ -4,6 +4,6 @@
 
   xdg.configFile."lazygit/config.yml".text = ''
     gui:
-        border: single
+    border: single
   '';
 }

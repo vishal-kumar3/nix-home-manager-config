@@ -16,7 +16,8 @@
     initContent = ''
       # Add Bun to PATH
       export PATH="$HOME/.bun/bin:$PATH"
-
+      export PATH="$HOME/.local/bin:$PATH"
+      source ~/.nvim-dev-env
       # Load .env file from nix directory
       if [ -f "$HOME/nix/.env" ]; then
         export $(cat "$HOME/nix/.env" | grep -v '^#' | xargs)

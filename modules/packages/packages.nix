@@ -2,7 +2,7 @@
 
 with pkgs; {
   home.packages = [
-    # Core utilities (removed neovim)
+    # Core utilities
     htop
     curl
     fzf
@@ -23,8 +23,6 @@ with pkgs; {
     tmux
     ripgrep
     zoxide
-
-    # LSP and formatters (moved to nvim/default.nix)
 
     # Fonts
     jetbrains-mono

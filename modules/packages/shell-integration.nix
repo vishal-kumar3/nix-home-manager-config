@@ -31,7 +31,7 @@
 
       # Better integration with any-nix-shell
       if [[ -n "$IN_NIX_SHELL" ]]; then
-        export PS1="(nix-shell) $PS1"
+        export PS1="(nix) $PS1"
       fi
 
       # Initialize any-nix-shell if available
